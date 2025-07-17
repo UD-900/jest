@@ -20,14 +20,9 @@ const config: Config = {
   preset: 'jest-preset-angular',
   // This path is relative to the project root (where jest.config.ts is)
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
-  // testMatch: [
-  //   '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
-  // ],
-
   testMatch: [
-    // Use path.join to ensure correct separators and then add the glob pattern
-    // The **/*.spec.ts part needs to be appended as a string for globbing
-    path.join(projectRootDir, 'src', '**', '*.spec.ts') 
+    // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
+    '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
   ],
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
