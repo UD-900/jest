@@ -5,7 +5,7 @@ pipeline {
     tools {
         // Specify the Node.js installation we configured in Jenkins.
         // Make sure the name matches exactly what you put in Step 1.4 (e.g., 'Node 20.x')
-        nodejs 'Node v22.16.0' // <--- REPLACE WITH YOUR CONFIGURED NODE.JS NAME
+        nodejs 'v22.16.0' // <--- REPLACE WITH YOUR CONFIGURED NODE.JS NAME
     }
 
     stages {
@@ -41,7 +41,7 @@ pipeline {
                 // Then, ensure your jest.config.ts has a 'reporters' array including 'default' and ['jest-junit', { outputDirectory: 'test-results', outputName: 'junit.xml' }]
                 // Example jest.config.ts snippet:
                 // reporters: ['default', ['jest-junit', { outputDirectory: 'test-results', outputName: 'junit.xml' }]],
-                sh 'npm test -- --coverage' // Assuming 'npm test' runs Jest and it's configured for JUnit output
+                sh 'ng test' // Assuming 'npm test' runs Jest and it's configured for JUnit output
             }
         }
 
