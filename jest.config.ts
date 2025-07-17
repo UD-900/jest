@@ -4,6 +4,7 @@ import { pathsToModuleNameMapper } from 'ts-jest';
 
 // Import the entire tsconfig.json content
 import * as tsconfigJson from './tsconfig.json';
+import path from 'node:path';
 
 // Define a minimal interface to assert the type of compilerOptions
 // This tells TypeScript that 'paths' is an optional property on compilerOptions
@@ -11,12 +12,22 @@ interface TsConfigCompilerOptions {
   paths?: { [key: string]: string[] }; // 'paths' is an object where keys are strings and values are arrays of strings
 }
 
+// Get the root directory using Node.js's path.resolve to ensure it's absolute and correctly formatted for the OS
+const projectRootDir = path.resolve(__dirname); // This will be C:\ProgramData\Jenkins\.jenkins\workspace\angular-jest
+
+
 const config: Config = {
   preset: 'jest-preset-angular',
   // This path is relative to the project root (where jest.config.ts is)
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+  // testMatch: [
+  //   '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
+  // ],
+
   testMatch: [
-    '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
+    // Use path.join to ensure correct separators and then add the glob pattern
+    // The **/*.spec.ts part needs to be appended as a string for globbing
+    path.join(projectRootDir, 'src', '**', '*.spec.ts') 
   ],
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
