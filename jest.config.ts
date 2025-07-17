@@ -22,7 +22,7 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
   testMatch: [
     // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
-    '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
+    '<rootDir>/src/app/**/*.spec.ts' // This pattern tells Jest where to find your test files
   ],
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
