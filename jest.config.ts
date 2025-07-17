@@ -26,6 +26,7 @@ const config: Config = {
   // Optional: Coverage settings
   coverageDirectory: 'coverage',
   coverageReporters: ['html', 'lcov', 'text-summary'],
+  reporters: ['default', ['jest-junit', { outputDirectory: 'test-results', outputName: 'junit.xml' }]]
 };
 
 export default config;
