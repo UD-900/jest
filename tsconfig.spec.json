@@ -18,9 +18,5 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ],
-  "exclude": [
-    "cypress", // Exclude Cypress folder
-    "cypress.config.ts" // Exclude Cypress config file
   ]
 }

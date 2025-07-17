@@ -12,17 +12,13 @@ interface TsConfigCompilerOptions {
   paths?: { [key: string]: string[] }; // 'paths' is an object where keys are strings and values are arrays of strings
 }
 
-// Get the root directory using Node.js's path.resolve to ensure it's absolute and correctly formatted for the OS
-const projectRootDir = path.resolve(__dirname); // This will be C:\ProgramData\Jenkins\.jenkins\workspace\angular-jest
-
-
 const config: Config = {
   preset: 'jest-preset-angular',
   // This path is relative to the project root (where jest.config.ts is)
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
   testMatch: [
     // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
-    '<rootDir>/src/app/**/*.spec.ts' // This pattern tells Jest where to find your test files
+    '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
   ],
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
