@@ -1,0 +1,26 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jest",
+      "node"
+    ], // Add 'jest' and 'node' types
+    "esModuleInterop": true, // Important for module interoperability
+    "emitDecoratorMetadata": true, // Important for Angular's Dependency Injection with Jest
+    "isolatedModules": false // Set this to false, or remove the line if it's there
+  },
+  "files": [
+    "src/polyfills.ts" // Ensure this is present and not duplicated
+  ],
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "cypress", // Exclude Cypress folder
+    "cypress.config.ts" // Exclude Cypress config file
+  ]
+}
