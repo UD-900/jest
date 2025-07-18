@@ -28,10 +28,19 @@ const config: Config = {
   preset: 'jest-preset-angular',
   // This path is relative to the project root (where jest.config.ts is)
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+<<<<<<< HEAD
   // testMatch: [
   //   // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
   //   '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
   // ],
+=======
+  testMatch: [
+    // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
+    //'<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
+      'C:/ProgramData/Jenkins/.jenkins/workspace/angular-jest/src/app/app.component.spec.ts'
+
+  ],
+>>>>>>> b48087c54f0c548e84471dcedd7342766b004cd0
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
     (tsconfigJson.compilerOptions as TsConfigCompilerOptions).paths || {},
