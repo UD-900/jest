@@ -13,15 +13,25 @@ interface TsConfigCompilerOptions {
 }
 
 const config: Config = {
+
+  // Tell Jest where your source lives
+  roots: ['<rootDir>/src'],
+  // Look for spec files anywhere under src
+  testMatch: ['**/*.spec.ts'],
+  // Use ts-jest to compile TS files
+  transform: {
+    '^.+\\.ts$': 'ts-jest',
+  },
+  // Recognize .ts imports
+  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+
   preset: 'jest-preset-angular',
   // This path is relative to the project root (where jest.config.ts is)
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
-  testMatch: [
-    // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
-    //'<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
-      '<rootDIr>/src/app/app.component.spec.ts'
-
-  ],
+  // testMatch: [
+  //   // REVERT THIS BACK to the original glob pattern, but still relative to rootDir
+  //   '<rootDir>/src/**/*.spec.ts' // This pattern tells Jest where to find your test files
+  // ],
   // Safely access paths using a type assertion and provide an empty object fallback
   moduleNameMapper: pathsToModuleNameMapper(
     (tsconfigJson.compilerOptions as TsConfigCompilerOptions).paths || {},
