@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="2" errors="0" time="7.122">
+  <testsuite name="AppComponent" errors="0" failures="2" skipped="0" timestamp="2025-07-18T02:14:17" time="4.166" tests="3">
+    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0.31">
+    </testcase>
+    <testcase classname="AppComponent should have as title &apos;jest&apos;" name="AppComponent should have as title &apos;jest&apos;" time="0.051">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;jest&quot;
+Received: &quot;oki&quot;
+    at C:\Users\S340\Documents\angular\jest\src\app\app.component.spec.ts:27:23
+    at _ZoneDelegate.invoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:410:32)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone-testing.umd.js:2219:43)
+    at _ZoneDelegate.invoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:409:38)
+    at ZoneImpl.run (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:145:47)
+    at Object.wrappedFunc (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone-testing.umd.js:449:38)
+    at Promise.then.completed (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:316:40)
+    at async _runTest (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:252:3)
+    at async _runTestsForDescribeBlock (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:126:9)
+    at async _runTestsForDescribeBlock (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:121:9)
+    at async run (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:71:3)
+    at async runAndTransformResultsToJestFormat (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    </testcase>
+    <testcase classname="AppComponent should render title" name="AppComponent should render title" time="0.06">
+      <failure>Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: &quot;Hello, jest&quot;
+Received string:    &quot;Hello, oki&quot;
+    at C:\Users\S340\Documents\angular\jest\src\app\app.component.spec.ts:34:55
+    at _ZoneDelegate.invoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:410:32)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone-testing.umd.js:2219:43)
+    at _ZoneDelegate.invoke (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:409:38)
+    at ZoneImpl.run (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone.umd.js:145:47)
+    at Object.wrappedFunc (C:\Users\S340\Documents\angular\jest\node_modules\zone.js\bundles\zone-testing.umd.js:449:38)
+    at Promise.then.completed (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:316:40)
+    at async _runTest (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:252:3)
+    at async _runTestsForDescribeBlock (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:126:9)
+    at async _runTestsForDescribeBlock (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:121:9)
+    at async run (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\run.js:71:3)
+    at async runAndTransformResultsToJestFormat (C:\Users\S340\Documents\angular\jest\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
